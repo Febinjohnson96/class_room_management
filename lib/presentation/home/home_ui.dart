@@ -9,7 +9,7 @@ class HomeUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<HomescreenBloc>(
-      create: (context) => HomescreenBloc(),
+      create: (context) => HomescreenBloc()..add(const HomescreenEvent.onLoad()),
       child: const HomeScreen(),
     );
   }
