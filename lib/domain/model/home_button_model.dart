@@ -8,7 +8,7 @@ class HomeButtonModel {
 
   HomeButtonModel({this.title, this.iconPath, this.color});
 
-  List<HomeButtonModel> homeButtons = [
+  List<HomeButtonModel> get homeButtons => [
       HomeButtonModel(
         title: "Students",
         color: const Color(0xFFAAC9BF),
