@@ -42,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                                   mainAxisSpacing: 10),
                           itemBuilder: (context, index) {
                             return CardWidget(
+                              callback: ()=> context.read<HomescreenBloc>().add(HomescreenEvent.onClickedButtons(buttons[index].title)),
                               title: buttons[index].title ?? '',
                               iconPath: buttons[index].iconPath ?? '',
                               color: buttons[index].color ?? Colors.transparent,
