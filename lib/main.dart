@@ -1,8 +1,11 @@
 import 'package:class_room_management/core/config/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:class_room_management/injector.dart' as injector;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await injector.initInjector();
   runApp(const MyApp());
 }
 

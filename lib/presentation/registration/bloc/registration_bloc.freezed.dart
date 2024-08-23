@@ -18,33 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$RegistrationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() onLoad,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? onLoad,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? onLoad,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_OnLoad value) onLoad,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_OnLoad value)? onLoad,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_OnLoad value)? onLoad,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,35 +69,35 @@ class _$RegistrationEventCopyWithImpl<$Res, $Val extends RegistrationEvent>
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$OnLoadImplCopyWith<$Res> {
+  factory _$$OnLoadImplCopyWith(
+          _$OnLoadImpl value, $Res Function(_$OnLoadImpl) then) =
+      __$$OnLoadImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$RegistrationEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$OnLoadImplCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res, _$OnLoadImpl>
+    implements _$$OnLoadImplCopyWith<$Res> {
+  __$$OnLoadImplCopyWithImpl(
+      _$OnLoadImpl _value, $Res Function(_$OnLoadImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$OnLoadImpl implements _OnLoad {
+  const _$OnLoadImpl();
 
   @override
   String toString() {
-    return 'RegistrationEvent.started()';
+    return 'RegistrationEvent.onLoad()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType && other is _$OnLoadImpl);
   }
 
   @override
@@ -106,27 +106,27 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() onLoad,
   }) {
-    return started();
+    return onLoad();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? onLoad,
   }) {
-    return started?.call();
+    return onLoad?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? onLoad,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (onLoad != null) {
+      return onLoad();
     }
     return orElse();
   }
@@ -134,34 +134,34 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_OnLoad value) onLoad,
   }) {
-    return started(this);
+    return onLoad(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_OnLoad value)? onLoad,
   }) {
-    return started?.call(this);
+    return onLoad?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_OnLoad value)? onLoad,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (onLoad != null) {
+      return onLoad(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements RegistrationEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class _OnLoad implements RegistrationEvent {
+  const factory _OnLoad() = _$OnLoadImpl;
 }
 
 /// @nodoc
@@ -169,32 +169,39 @@ mixin _$RegistrationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function(List<RegistrationModel> registrationList)
+        onLoadState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function(List<RegistrationModel> registrationList)? onLoadState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function(List<RegistrationModel> registrationList)? onLoadState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_OnLoadState value) onLoadState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_OnLoadState value)? onLoadState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_OnLoadState value)? onLoadState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -257,6 +264,8 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function(List<RegistrationModel> registrationList)
+        onLoadState,
   }) {
     return initial();
   }
@@ -265,6 +274,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function(List<RegistrationModel> registrationList)? onLoadState,
   }) {
     return initial?.call();
   }
@@ -273,6 +283,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function(List<RegistrationModel> registrationList)? onLoadState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -285,6 +296,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_OnLoadState value) onLoadState,
   }) {
     return initial(this);
   }
@@ -293,6 +305,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_OnLoadState value)? onLoadState,
   }) {
     return initial?.call(this);
   }
@@ -301,6 +314,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_OnLoadState value)? onLoadState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -312,4 +326,150 @@ class _$InitialImpl implements _Initial {
 
 abstract class _Initial implements RegistrationState {
   const factory _Initial() = _$InitialImpl;
+}
+
+/// @nodoc
+abstract class _$$OnLoadStateImplCopyWith<$Res> {
+  factory _$$OnLoadStateImplCopyWith(
+          _$OnLoadStateImpl value, $Res Function(_$OnLoadStateImpl) then) =
+      __$$OnLoadStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<RegistrationModel> registrationList});
+}
+
+/// @nodoc
+class __$$OnLoadStateImplCopyWithImpl<$Res>
+    extends _$RegistrationStateCopyWithImpl<$Res, _$OnLoadStateImpl>
+    implements _$$OnLoadStateImplCopyWith<$Res> {
+  __$$OnLoadStateImplCopyWithImpl(
+      _$OnLoadStateImpl _value, $Res Function(_$OnLoadStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? registrationList = null,
+  }) {
+    return _then(_$OnLoadStateImpl(
+      registrationList: null == registrationList
+          ? _value._registrationList
+          : registrationList // ignore: cast_nullable_to_non_nullable
+              as List<RegistrationModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnLoadStateImpl implements _OnLoadState {
+  const _$OnLoadStateImpl(
+      {required final List<RegistrationModel> registrationList})
+      : _registrationList = registrationList;
+
+  final List<RegistrationModel> _registrationList;
+  @override
+  List<RegistrationModel> get registrationList {
+    if (_registrationList is EqualUnmodifiableListView)
+      return _registrationList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_registrationList);
+  }
+
+  @override
+  String toString() {
+    return 'RegistrationState.onLoadState(registrationList: $registrationList)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnLoadStateImpl &&
+            const DeepCollectionEquality()
+                .equals(other._registrationList, _registrationList));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_registrationList));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnLoadStateImplCopyWith<_$OnLoadStateImpl> get copyWith =>
+      __$$OnLoadStateImplCopyWithImpl<_$OnLoadStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<RegistrationModel> registrationList)
+        onLoadState,
+  }) {
+    return onLoadState(registrationList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<RegistrationModel> registrationList)? onLoadState,
+  }) {
+    return onLoadState?.call(registrationList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<RegistrationModel> registrationList)? onLoadState,
+    required TResult orElse(),
+  }) {
+    if (onLoadState != null) {
+      return onLoadState(registrationList);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_OnLoadState value) onLoadState,
+  }) {
+    return onLoadState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_OnLoadState value)? onLoadState,
+  }) {
+    return onLoadState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_OnLoadState value)? onLoadState,
+    required TResult orElse(),
+  }) {
+    if (onLoadState != null) {
+      return onLoadState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnLoadState implements RegistrationState {
+  const factory _OnLoadState(
+          {required final List<RegistrationModel> registrationList}) =
+      _$OnLoadStateImpl;
+
+  List<RegistrationModel> get registrationList;
+  @JsonKey(ignore: true)
+  _$$OnLoadStateImplCopyWith<_$OnLoadStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
