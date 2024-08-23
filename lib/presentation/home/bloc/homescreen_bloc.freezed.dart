@@ -318,18 +318,21 @@ mixin _$HomescreenState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<HomeButtonModel> buttons) onLoadState,
+    required TResult Function(String routeName) routeChangeState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult? Function(String routeName)? routeChangeState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult Function(String routeName)? routeChangeState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -337,18 +340,21 @@ mixin _$HomescreenState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_RouteChangeState value) routeChangeState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_RouteChangeState value)? routeChangeState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_RouteChangeState value)? routeChangeState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -412,6 +418,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<HomeButtonModel> buttons) onLoadState,
+    required TResult Function(String routeName) routeChangeState,
   }) {
     return initial();
   }
@@ -421,6 +428,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult? Function(String routeName)? routeChangeState,
   }) {
     return initial?.call();
   }
@@ -430,6 +438,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult Function(String routeName)? routeChangeState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -443,6 +452,7 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_RouteChangeState value) routeChangeState,
   }) {
     return initial(this);
   }
@@ -452,6 +462,7 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_RouteChangeState value)? routeChangeState,
   }) {
     return initial?.call(this);
   }
@@ -461,6 +472,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_RouteChangeState value)? routeChangeState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -547,6 +559,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<HomeButtonModel> buttons) onLoadState,
+    required TResult Function(String routeName) routeChangeState,
   }) {
     return onLoadState(buttons);
   }
@@ -556,6 +569,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult? Function(String routeName)? routeChangeState,
   }) {
     return onLoadState?.call(buttons);
   }
@@ -565,6 +579,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult Function(String routeName)? routeChangeState,
     required TResult orElse(),
   }) {
     if (onLoadState != null) {
@@ -578,6 +593,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_RouteChangeState value) routeChangeState,
   }) {
     return onLoadState(this);
   }
@@ -587,6 +603,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_RouteChangeState value)? routeChangeState,
   }) {
     return onLoadState?.call(this);
   }
@@ -596,6 +613,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_RouteChangeState value)? routeChangeState,
     required TResult orElse(),
   }) {
     if (onLoadState != null) {
@@ -612,5 +630,147 @@ abstract class _OnLoadState implements HomescreenState {
   List<HomeButtonModel> get buttons;
   @JsonKey(ignore: true)
   _$$OnLoadStateImplCopyWith<_$OnLoadStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RouteChangeStateImplCopyWith<$Res> {
+  factory _$$RouteChangeStateImplCopyWith(_$RouteChangeStateImpl value,
+          $Res Function(_$RouteChangeStateImpl) then) =
+      __$$RouteChangeStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String routeName});
+}
+
+/// @nodoc
+class __$$RouteChangeStateImplCopyWithImpl<$Res>
+    extends _$HomescreenStateCopyWithImpl<$Res, _$RouteChangeStateImpl>
+    implements _$$RouteChangeStateImplCopyWith<$Res> {
+  __$$RouteChangeStateImplCopyWithImpl(_$RouteChangeStateImpl _value,
+      $Res Function(_$RouteChangeStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? routeName = null,
+  }) {
+    return _then(_$RouteChangeStateImpl(
+      routeName: null == routeName
+          ? _value.routeName
+          : routeName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$RouteChangeStateImpl implements _RouteChangeState {
+  const _$RouteChangeStateImpl({required this.routeName});
+
+  @override
+  final String routeName;
+
+  @override
+  String toString() {
+    return 'HomescreenState.routeChangeState(routeName: $routeName)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RouteChangeStateImpl &&
+            (identical(other.routeName, routeName) ||
+                other.routeName == routeName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, routeName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RouteChangeStateImplCopyWith<_$RouteChangeStateImpl> get copyWith =>
+      __$$RouteChangeStateImplCopyWithImpl<_$RouteChangeStateImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<HomeButtonModel> buttons) onLoadState,
+    required TResult Function(String routeName) routeChangeState,
+  }) {
+    return routeChangeState(routeName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult? Function(String routeName)? routeChangeState,
+  }) {
+    return routeChangeState?.call(routeName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<HomeButtonModel> buttons)? onLoadState,
+    TResult Function(String routeName)? routeChangeState,
+    required TResult orElse(),
+  }) {
+    if (routeChangeState != null) {
+      return routeChangeState(routeName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_RouteChangeState value) routeChangeState,
+  }) {
+    return routeChangeState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_RouteChangeState value)? routeChangeState,
+  }) {
+    return routeChangeState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_RouteChangeState value)? routeChangeState,
+    required TResult orElse(),
+  }) {
+    if (routeChangeState != null) {
+      return routeChangeState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RouteChangeState implements HomescreenState {
+  const factory _RouteChangeState({required final String routeName}) =
+      _$RouteChangeStateImpl;
+
+  String get routeName;
+  @JsonKey(ignore: true)
+  _$$RouteChangeStateImplCopyWith<_$RouteChangeStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

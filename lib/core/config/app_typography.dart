@@ -7,4 +7,6 @@ class AppTypography {
       fontFamily: 'SFPro', fontSize: 17.sp, fontWeight: FontWeight.w600);
   static TextStyle sfPro22w400 = TextStyle(
       fontFamily: 'SFPro', fontSize: 22.sp, fontWeight: FontWeight.w400);
+  static TextStyle sfPro22w4700 = TextStyle(
+      fontFamily: 'SFPro', fontSize: 22.sp, fontWeight: FontWeight.w700);
 }

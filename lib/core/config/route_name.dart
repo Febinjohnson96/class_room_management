@@ -1,8 +1,8 @@
 class RouteName{
   RouteName._();
   static const String home = '/';
-  static const String classroom = '/classroom';
-  static const String registration = '/registration';
-  static const String student = '/student';
-  static const String subjectscreen = '/subjectscreen';
+  static const String classroom = '/Classrooms';
+  static const String registration = '/Registrations';
+  static const String student = '/Students';
+  static const String subjectscreen = '/Subjects';
 }

@@ -22,5 +22,6 @@ class HomescreenBloc extends Bloc<HomescreenEvent, HomescreenState> {
   void _onClickedButtons(
       _OnClickedButtons event, Emitter<HomescreenState> emit) {
     AppLogger.infolog(event.routeName ?? '');
+    emit(HomescreenState.routeChangeState(routeName: "/${event.routeName}"));
   }
 }
