@@ -11,7 +11,9 @@ class RegistrationUi extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<RegistrationBloc>(
       create: (context) => RegistrationBloc(
-          registrationRepo: injector(), studentRepo: injector())
+          registrationRepo: injector(),
+          studentRepo: injector(),
+          subjectRepo: injector())
         ..add(const RegistrationEvent.onLoad()),
       child: const RegistrationScreen(),
     );

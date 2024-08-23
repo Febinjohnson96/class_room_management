@@ -1,8 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:class_room_management/domain/model/registration_model/registration_model.dart';
 import 'package:class_room_management/domain/model/student/student_model.dart';
+import 'package:class_room_management/domain/model/subject_model/subject_model.dart';
 import 'package:class_room_management/domain/repository/registration_repo/registration_repo.dart';
 import 'package:class_room_management/domain/repository/student_repo/student_repo.dart';
+import 'package:class_room_management/domain/repository/subject_repo/subject_repo.dart';
 import 'package:class_room_management/utils/logger/app_logger.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -13,8 +15,12 @@ part 'registration_bloc.freezed.dart';
 class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
   final RegistrationRepo registrationRepo;
   final StudentRepo studentRepo;
-  RegistrationBloc({required this.registrationRepo, required this.studentRepo})
-      : super(const RegistrationState.initial()) {
+  final SubjectRepo subjectRepo;
+  RegistrationBloc({
+    required this.registrationRepo,
+    required this.studentRepo,
+    required this.subjectRepo,
+  }) : super(const RegistrationState.initial()) {
     on<_OnLoad>(_onLoadEvent);
     on<_OnClickedNewRegistration>(_onClickedNewRegistration);
     on<_OnCancelRegistration>(_onCancelRegistration);
@@ -24,7 +30,11 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
     AppLogger.warninglog("Calling warninglog");
     final registrationList = await registrationRepo.getregistrationList();
     final studentList = await studentRepo.getStudentList();
-    emit(RegistrationState.onLoadState(registrationList: registrationList,studentList: studentList));
+    final subjectList = await subjectRepo.getSubjectList();
+    emit(RegistrationState.onLoadState(
+        registrationList: registrationList,
+        studentList: studentList,
+        subjectList: subjectList));
   }
 
   void _onClickedNewRegistration(

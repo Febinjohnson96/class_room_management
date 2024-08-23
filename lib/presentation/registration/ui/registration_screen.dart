@@ -2,6 +2,7 @@ import 'package:class_room_management/core/config/app_typography.dart';
 import 'package:class_room_management/core/config/route_name.dart';
 import 'package:class_room_management/domain/model/registration_model/registration_model.dart';
 import 'package:class_room_management/domain/model/student/student_model.dart';
+import 'package:class_room_management/domain/model/subject_model/subject_model.dart';
 import 'package:class_room_management/presentation/registration/bloc/registration_bloc.dart';
 import 'package:class_room_management/presentation/registration/views/new_registration_view.dart';
 import 'package:class_room_management/widgets/app_scaffold.dart';
@@ -45,17 +46,21 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               builder: (context, state) {
             List<RegistrationModel> registrationListLoaded = [];
             List<StudentModel> studentListLoaded = [];
+            List<SubjectModel> subjectListLoaded = [];
             return Expanded(
               child: state.when(
                 initial: () => const Center(child: CircularProgressIndicator()),
-                onLoadState: (registrationList, studentList) {
+                onLoadState: (registrationList, studentList,subjectList) {
                   registrationListLoaded = registrationList;
-                  studentListLoaded = studentList;
+                  studentListLoaded.addAll(studentList);
+                  subjectListLoaded.addAll(subjectList);
                   return _buildRegistrationView(registrationList);
                 },
                 newRegistration: (isNewRegistration) {
                   if (isNewRegistration) {
                     return NewRegistrationView(
+                      studentList: studentListLoaded,
+                      subjectList: subjectListLoaded,
                       subjectController: subjectController,
                       studentNameController: studentNameController,
                       onPressedCancel: () => context.read<RegistrationBloc>()

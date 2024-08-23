@@ -423,7 +423,7 @@ mixin _$RegistrationState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)
+            List<StudentModel> studentList, List<SubjectModel> subjectList)
         onLoadState,
     required TResult Function(bool isNewRegistration) newRegistration,
   }) =>
@@ -432,7 +432,7 @@ mixin _$RegistrationState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult? Function(bool isNewRegistration)? newRegistration,
   }) =>
@@ -441,7 +441,7 @@ mixin _$RegistrationState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult Function(bool isNewRegistration)? newRegistration,
     required TResult orElse(),
@@ -529,7 +529,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)
+            List<StudentModel> studentList, List<SubjectModel> subjectList)
         onLoadState,
     required TResult Function(bool isNewRegistration) newRegistration,
   }) {
@@ -541,7 +541,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult? Function(bool isNewRegistration)? newRegistration,
   }) {
@@ -553,7 +553,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult Function(bool isNewRegistration)? newRegistration,
     required TResult orElse(),
@@ -611,7 +611,8 @@ abstract class _$$OnLoadStateImplCopyWith<$Res> {
   @useResult
   $Res call(
       {List<RegistrationModel> registrationList,
-      List<StudentModel> studentList});
+      List<StudentModel> studentList,
+      List<SubjectModel> subjectList});
 }
 
 /// @nodoc
@@ -627,6 +628,7 @@ class __$$OnLoadStateImplCopyWithImpl<$Res>
   $Res call({
     Object? registrationList = null,
     Object? studentList = null,
+    Object? subjectList = null,
   }) {
     return _then(_$OnLoadStateImpl(
       registrationList: null == registrationList
@@ -637,6 +639,10 @@ class __$$OnLoadStateImplCopyWithImpl<$Res>
           ? _value._studentList
           : studentList // ignore: cast_nullable_to_non_nullable
               as List<StudentModel>,
+      subjectList: null == subjectList
+          ? _value._subjectList
+          : subjectList // ignore: cast_nullable_to_non_nullable
+              as List<SubjectModel>,
     ));
   }
 }
@@ -646,9 +652,11 @@ class __$$OnLoadStateImplCopyWithImpl<$Res>
 class _$OnLoadStateImpl implements _OnLoadState {
   const _$OnLoadStateImpl(
       {required final List<RegistrationModel> registrationList,
-      required final List<StudentModel> studentList})
+      required final List<StudentModel> studentList,
+      required final List<SubjectModel> subjectList})
       : _registrationList = registrationList,
-        _studentList = studentList;
+        _studentList = studentList,
+        _subjectList = subjectList;
 
   final List<RegistrationModel> _registrationList;
   @override
@@ -667,9 +675,17 @@ class _$OnLoadStateImpl implements _OnLoadState {
     return EqualUnmodifiableListView(_studentList);
   }
 
+  final List<SubjectModel> _subjectList;
+  @override
+  List<SubjectModel> get subjectList {
+    if (_subjectList is EqualUnmodifiableListView) return _subjectList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_subjectList);
+  }
+
   @override
   String toString() {
-    return 'RegistrationState.onLoadState(registrationList: $registrationList, studentList: $studentList)';
+    return 'RegistrationState.onLoadState(registrationList: $registrationList, studentList: $studentList, subjectList: $subjectList)';
   }
 
   @override
@@ -680,14 +696,17 @@ class _$OnLoadStateImpl implements _OnLoadState {
             const DeepCollectionEquality()
                 .equals(other._registrationList, _registrationList) &&
             const DeepCollectionEquality()
-                .equals(other._studentList, _studentList));
+                .equals(other._studentList, _studentList) &&
+            const DeepCollectionEquality()
+                .equals(other._subjectList, _subjectList));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_registrationList),
-      const DeepCollectionEquality().hash(_studentList));
+      const DeepCollectionEquality().hash(_studentList),
+      const DeepCollectionEquality().hash(_subjectList));
 
   @JsonKey(ignore: true)
   @override
@@ -700,11 +719,11 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)
+            List<StudentModel> studentList, List<SubjectModel> subjectList)
         onLoadState,
     required TResult Function(bool isNewRegistration) newRegistration,
   }) {
-    return onLoadState(registrationList, studentList);
+    return onLoadState(registrationList, studentList, subjectList);
   }
 
   @override
@@ -712,11 +731,11 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult? Function(bool isNewRegistration)? newRegistration,
   }) {
-    return onLoadState?.call(registrationList, studentList);
+    return onLoadState?.call(registrationList, studentList, subjectList);
   }
 
   @override
@@ -724,13 +743,13 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult Function(bool isNewRegistration)? newRegistration,
     required TResult orElse(),
   }) {
     if (onLoadState != null) {
-      return onLoadState(registrationList, studentList);
+      return onLoadState(registrationList, studentList, subjectList);
     }
     return orElse();
   }
@@ -773,10 +792,12 @@ class _$OnLoadStateImpl implements _OnLoadState {
 abstract class _OnLoadState implements RegistrationState {
   const factory _OnLoadState(
       {required final List<RegistrationModel> registrationList,
-      required final List<StudentModel> studentList}) = _$OnLoadStateImpl;
+      required final List<StudentModel> studentList,
+      required final List<SubjectModel> subjectList}) = _$OnLoadStateImpl;
 
   List<RegistrationModel> get registrationList;
   List<StudentModel> get studentList;
+  List<SubjectModel> get subjectList;
   @JsonKey(ignore: true)
   _$$OnLoadStateImplCopyWith<_$OnLoadStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -850,7 +871,7 @@ class _$NewRegistrationImpl implements _NewRegistration {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)
+            List<StudentModel> studentList, List<SubjectModel> subjectList)
         onLoadState,
     required TResult Function(bool isNewRegistration) newRegistration,
   }) {
@@ -862,7 +883,7 @@ class _$NewRegistrationImpl implements _NewRegistration {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult? Function(bool isNewRegistration)? newRegistration,
   }) {
@@ -874,7 +895,7 @@ class _$NewRegistrationImpl implements _NewRegistration {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<RegistrationModel> registrationList,
-            List<StudentModel> studentList)?
+            List<StudentModel> studentList, List<SubjectModel> subjectList)?
         onLoadState,
     TResult Function(bool isNewRegistration)? newRegistration,
     required TResult orElse(),
