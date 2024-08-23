@@ -39,36 +39,42 @@ class StudentScreen extends StatelessWidget {
               child: state.when(
                 initial: () => const Center(child: CircularProgressIndicator()),
                 onLoadState: (studentList) => ListView.separated(
-                    itemBuilder: (context, index) => Container(
-                          decoration: BoxDecoration(
-                              color: const Color(0xFFD1D1D1),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () {
+                      context.push(RouteName.studentDetails,
+                          extra: studentList[index]);
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: const Color(0xFFD1D1D1),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(studentList[index].name ?? '',
-                                        style: AppTypography.sfPro17w600),
-                                    Text(
-                                      studentList[index].email ?? '',
-                                    )
-                                  ],
-                                ),
-                                const Spacer(),
-                                Text("Age : ${studentList[index].age}",
+                                Text(studentList[index].name ?? '',
                                     style: AppTypography.sfPro17w600),
+                                Text(
+                                  studentList[index].email ?? '',
+                                )
                               ],
                             ),
-                          ),
+                            const Spacer(),
+                            Text("Age : ${studentList[index].age}",
+                                style: AppTypography.sfPro17w600),
+                          ],
                         ),
-                    itemCount: studentList.length,
-                    separatorBuilder: (context, index) => SizedBox(
-                          height: 10.h,
-                        ),
+                      ),
                     ),
+                  ),
+                  itemCount: studentList.length,
+                  separatorBuilder: (context, index) => SizedBox(
+                    height: 10.h,
+                  ),
+                ),
               ),
             );
           })
