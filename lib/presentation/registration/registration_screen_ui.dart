@@ -28,6 +28,23 @@ class RegistrationScreenUi extends StatelessWidget {
           Text(
             "Registrations",
             style: AppTypography.sfPro22w4700,
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: 177.w,
+              height: 48.h,
+              decoration: BoxDecoration(
+                color: const Color(0xFF007AFF).withOpacity(0.15),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                  child: Text(
+                "New Registration",
+                style: AppTypography.sfPro17w600
+                    .copyWith(color: const Color(0xFF007AFF)),
+              )),
+            ),
           )
         ],
       ),
