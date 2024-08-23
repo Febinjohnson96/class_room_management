@@ -9,7 +9,7 @@ class SubjectModel {
   SubjectModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
-    teacherName = json['teacher_name'];
+    teacherName = json['teacher'];
     credits = json['credits'];
   }
 

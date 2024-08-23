@@ -1,4 +1,4 @@
-class RouteName{
+class RouteName {
   RouteName._();
   static const String home = '/';
   static const String classroom = '/Classrooms';
@@ -6,4 +6,5 @@ class RouteName{
   static const String student = '/Students';
   static const String subjectscreen = '/Subjects';
   static const String studentDetails = '/StudentDetails';
+  static const String subjectDetails = "/SubjectDetails";
 }

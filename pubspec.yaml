@@ -76,6 +76,7 @@ flutter:
   assets:
     - assets/svg/home_screen/
     - assets/images/student_detail/
+    - assets/images/subject_detail/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -15,6 +15,10 @@ class $AssetsImagesGen {
   /// Directory path: assets/images/student_detail
   $AssetsImagesStudentDetailGen get studentDetail =>
       const $AssetsImagesStudentDetailGen();
+
+  /// Directory path: assets/images/subject_detail
+  $AssetsImagesSubjectDetailGen get subjectDetail =>
+      const $AssetsImagesSubjectDetailGen();
 }
 
 class $AssetsSvgGen {
@@ -33,6 +37,17 @@ class $AssetsImagesStudentDetailGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [student];
+}
+
+class $AssetsImagesSubjectDetailGen {
+  const $AssetsImagesSubjectDetailGen();
+
+  /// File path: assets/images/subject_detail/subject.png
+  AssetGenImage get subject =>
+      const AssetGenImage('assets/images/subject_detail/subject.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [subject];
 }
 
 class $AssetsSvgHomeScreenGen {
