@@ -19,32 +19,46 @@ mixin _$RegistrationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() onLoad,
+    required TResult Function() onClickedNewRegistration,
+    required TResult Function() onCancelRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? onLoad,
+    TResult? Function()? onClickedNewRegistration,
+    TResult? Function()? onCancelRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onLoad,
+    TResult Function()? onClickedNewRegistration,
+    TResult Function()? onCancelRegistration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnLoad value) onLoad,
+    required TResult Function(_OnClickedNewRegistration value)
+        onClickedNewRegistration,
+    required TResult Function(_OnCancelRegistration value) onCancelRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnLoad value)? onLoad,
+    TResult? Function(_OnClickedNewRegistration value)?
+        onClickedNewRegistration,
+    TResult? Function(_OnCancelRegistration value)? onCancelRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnLoad value)? onLoad,
+    TResult Function(_OnClickedNewRegistration value)? onClickedNewRegistration,
+    TResult Function(_OnCancelRegistration value)? onCancelRegistration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +121,8 @@ class _$OnLoadImpl implements _OnLoad {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() onLoad,
+    required TResult Function() onClickedNewRegistration,
+    required TResult Function() onCancelRegistration,
   }) {
     return onLoad();
   }
@@ -115,6 +131,8 @@ class _$OnLoadImpl implements _OnLoad {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? onLoad,
+    TResult? Function()? onClickedNewRegistration,
+    TResult? Function()? onCancelRegistration,
   }) {
     return onLoad?.call();
   }
@@ -123,6 +141,8 @@ class _$OnLoadImpl implements _OnLoad {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? onLoad,
+    TResult Function()? onClickedNewRegistration,
+    TResult Function()? onCancelRegistration,
     required TResult orElse(),
   }) {
     if (onLoad != null) {
@@ -135,6 +155,9 @@ class _$OnLoadImpl implements _OnLoad {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_OnLoad value) onLoad,
+    required TResult Function(_OnClickedNewRegistration value)
+        onClickedNewRegistration,
+    required TResult Function(_OnCancelRegistration value) onCancelRegistration,
   }) {
     return onLoad(this);
   }
@@ -143,6 +166,9 @@ class _$OnLoadImpl implements _OnLoad {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_OnLoad value)? onLoad,
+    TResult? Function(_OnClickedNewRegistration value)?
+        onClickedNewRegistration,
+    TResult? Function(_OnCancelRegistration value)? onCancelRegistration,
   }) {
     return onLoad?.call(this);
   }
@@ -151,6 +177,8 @@ class _$OnLoadImpl implements _OnLoad {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_OnLoad value)? onLoad,
+    TResult Function(_OnClickedNewRegistration value)? onClickedNewRegistration,
+    TResult Function(_OnCancelRegistration value)? onCancelRegistration,
     required TResult orElse(),
   }) {
     if (onLoad != null) {
@@ -165,24 +193,257 @@ abstract class _OnLoad implements RegistrationEvent {
 }
 
 /// @nodoc
+abstract class _$$OnClickedNewRegistrationImplCopyWith<$Res> {
+  factory _$$OnClickedNewRegistrationImplCopyWith(
+          _$OnClickedNewRegistrationImpl value,
+          $Res Function(_$OnClickedNewRegistrationImpl) then) =
+      __$$OnClickedNewRegistrationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnClickedNewRegistrationImplCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res,
+        _$OnClickedNewRegistrationImpl>
+    implements _$$OnClickedNewRegistrationImplCopyWith<$Res> {
+  __$$OnClickedNewRegistrationImplCopyWithImpl(
+      _$OnClickedNewRegistrationImpl _value,
+      $Res Function(_$OnClickedNewRegistrationImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$OnClickedNewRegistrationImpl implements _OnClickedNewRegistration {
+  const _$OnClickedNewRegistrationImpl();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.onClickedNewRegistration()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnClickedNewRegistrationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onLoad,
+    required TResult Function() onClickedNewRegistration,
+    required TResult Function() onCancelRegistration,
+  }) {
+    return onClickedNewRegistration();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? onLoad,
+    TResult? Function()? onClickedNewRegistration,
+    TResult? Function()? onCancelRegistration,
+  }) {
+    return onClickedNewRegistration?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onLoad,
+    TResult Function()? onClickedNewRegistration,
+    TResult Function()? onCancelRegistration,
+    required TResult orElse(),
+  }) {
+    if (onClickedNewRegistration != null) {
+      return onClickedNewRegistration();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnLoad value) onLoad,
+    required TResult Function(_OnClickedNewRegistration value)
+        onClickedNewRegistration,
+    required TResult Function(_OnCancelRegistration value) onCancelRegistration,
+  }) {
+    return onClickedNewRegistration(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnLoad value)? onLoad,
+    TResult? Function(_OnClickedNewRegistration value)?
+        onClickedNewRegistration,
+    TResult? Function(_OnCancelRegistration value)? onCancelRegistration,
+  }) {
+    return onClickedNewRegistration?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnLoad value)? onLoad,
+    TResult Function(_OnClickedNewRegistration value)? onClickedNewRegistration,
+    TResult Function(_OnCancelRegistration value)? onCancelRegistration,
+    required TResult orElse(),
+  }) {
+    if (onClickedNewRegistration != null) {
+      return onClickedNewRegistration(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnClickedNewRegistration implements RegistrationEvent {
+  const factory _OnClickedNewRegistration() = _$OnClickedNewRegistrationImpl;
+}
+
+/// @nodoc
+abstract class _$$OnCancelRegistrationImplCopyWith<$Res> {
+  factory _$$OnCancelRegistrationImplCopyWith(_$OnCancelRegistrationImpl value,
+          $Res Function(_$OnCancelRegistrationImpl) then) =
+      __$$OnCancelRegistrationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnCancelRegistrationImplCopyWithImpl<$Res>
+    extends _$RegistrationEventCopyWithImpl<$Res, _$OnCancelRegistrationImpl>
+    implements _$$OnCancelRegistrationImplCopyWith<$Res> {
+  __$$OnCancelRegistrationImplCopyWithImpl(_$OnCancelRegistrationImpl _value,
+      $Res Function(_$OnCancelRegistrationImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$OnCancelRegistrationImpl implements _OnCancelRegistration {
+  const _$OnCancelRegistrationImpl();
+
+  @override
+  String toString() {
+    return 'RegistrationEvent.onCancelRegistration()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnCancelRegistrationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() onLoad,
+    required TResult Function() onClickedNewRegistration,
+    required TResult Function() onCancelRegistration,
+  }) {
+    return onCancelRegistration();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? onLoad,
+    TResult? Function()? onClickedNewRegistration,
+    TResult? Function()? onCancelRegistration,
+  }) {
+    return onCancelRegistration?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? onLoad,
+    TResult Function()? onClickedNewRegistration,
+    TResult Function()? onCancelRegistration,
+    required TResult orElse(),
+  }) {
+    if (onCancelRegistration != null) {
+      return onCancelRegistration();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnLoad value) onLoad,
+    required TResult Function(_OnClickedNewRegistration value)
+        onClickedNewRegistration,
+    required TResult Function(_OnCancelRegistration value) onCancelRegistration,
+  }) {
+    return onCancelRegistration(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnLoad value)? onLoad,
+    TResult? Function(_OnClickedNewRegistration value)?
+        onClickedNewRegistration,
+    TResult? Function(_OnCancelRegistration value)? onCancelRegistration,
+  }) {
+    return onCancelRegistration?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnLoad value)? onLoad,
+    TResult Function(_OnClickedNewRegistration value)? onClickedNewRegistration,
+    TResult Function(_OnCancelRegistration value)? onCancelRegistration,
+    required TResult orElse(),
+  }) {
+    if (onCancelRegistration != null) {
+      return onCancelRegistration(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnCancelRegistration implements RegistrationEvent {
+  const factory _OnCancelRegistration() = _$OnCancelRegistrationImpl;
+}
+
+/// @nodoc
 mixin _$RegistrationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<RegistrationModel> registrationList)
+    required TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)
         onLoadState,
+    required TResult Function(bool isNewRegistration) newRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(List<RegistrationModel> registrationList)? onLoadState,
+    TResult? Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult? Function(bool isNewRegistration)? newRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<RegistrationModel> registrationList)? onLoadState,
+    TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult Function(bool isNewRegistration)? newRegistration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -190,18 +451,21 @@ mixin _$RegistrationState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_NewRegistration value) newRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_NewRegistration value)? newRegistration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_NewRegistration value)? newRegistration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -264,8 +528,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<RegistrationModel> registrationList)
+    required TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)
         onLoadState,
+    required TResult Function(bool isNewRegistration) newRegistration,
   }) {
     return initial();
   }
@@ -274,7 +540,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(List<RegistrationModel> registrationList)? onLoadState,
+    TResult? Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult? Function(bool isNewRegistration)? newRegistration,
   }) {
     return initial?.call();
   }
@@ -283,7 +552,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<RegistrationModel> registrationList)? onLoadState,
+    TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult Function(bool isNewRegistration)? newRegistration,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -297,6 +569,7 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_NewRegistration value) newRegistration,
   }) {
     return initial(this);
   }
@@ -306,6 +579,7 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_NewRegistration value)? newRegistration,
   }) {
     return initial?.call(this);
   }
@@ -315,6 +589,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_NewRegistration value)? newRegistration,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -334,7 +609,9 @@ abstract class _$$OnLoadStateImplCopyWith<$Res> {
           _$OnLoadStateImpl value, $Res Function(_$OnLoadStateImpl) then) =
       __$$OnLoadStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<RegistrationModel> registrationList});
+  $Res call(
+      {List<RegistrationModel> registrationList,
+      List<StudentModel> studentList});
 }
 
 /// @nodoc
@@ -349,12 +626,17 @@ class __$$OnLoadStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? registrationList = null,
+    Object? studentList = null,
   }) {
     return _then(_$OnLoadStateImpl(
       registrationList: null == registrationList
           ? _value._registrationList
           : registrationList // ignore: cast_nullable_to_non_nullable
               as List<RegistrationModel>,
+      studentList: null == studentList
+          ? _value._studentList
+          : studentList // ignore: cast_nullable_to_non_nullable
+              as List<StudentModel>,
     ));
   }
 }
@@ -363,8 +645,10 @@ class __$$OnLoadStateImplCopyWithImpl<$Res>
 
 class _$OnLoadStateImpl implements _OnLoadState {
   const _$OnLoadStateImpl(
-      {required final List<RegistrationModel> registrationList})
-      : _registrationList = registrationList;
+      {required final List<RegistrationModel> registrationList,
+      required final List<StudentModel> studentList})
+      : _registrationList = registrationList,
+        _studentList = studentList;
 
   final List<RegistrationModel> _registrationList;
   @override
@@ -375,9 +659,17 @@ class _$OnLoadStateImpl implements _OnLoadState {
     return EqualUnmodifiableListView(_registrationList);
   }
 
+  final List<StudentModel> _studentList;
+  @override
+  List<StudentModel> get studentList {
+    if (_studentList is EqualUnmodifiableListView) return _studentList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_studentList);
+  }
+
   @override
   String toString() {
-    return 'RegistrationState.onLoadState(registrationList: $registrationList)';
+    return 'RegistrationState.onLoadState(registrationList: $registrationList, studentList: $studentList)';
   }
 
   @override
@@ -386,12 +678,16 @@ class _$OnLoadStateImpl implements _OnLoadState {
         (other.runtimeType == runtimeType &&
             other is _$OnLoadStateImpl &&
             const DeepCollectionEquality()
-                .equals(other._registrationList, _registrationList));
+                .equals(other._registrationList, _registrationList) &&
+            const DeepCollectionEquality()
+                .equals(other._studentList, _studentList));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_registrationList));
+      runtimeType,
+      const DeepCollectionEquality().hash(_registrationList),
+      const DeepCollectionEquality().hash(_studentList));
 
   @JsonKey(ignore: true)
   @override
@@ -403,30 +699,38 @@ class _$OnLoadStateImpl implements _OnLoadState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<RegistrationModel> registrationList)
+    required TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)
         onLoadState,
+    required TResult Function(bool isNewRegistration) newRegistration,
   }) {
-    return onLoadState(registrationList);
+    return onLoadState(registrationList, studentList);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(List<RegistrationModel> registrationList)? onLoadState,
+    TResult? Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult? Function(bool isNewRegistration)? newRegistration,
   }) {
-    return onLoadState?.call(registrationList);
+    return onLoadState?.call(registrationList, studentList);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<RegistrationModel> registrationList)? onLoadState,
+    TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult Function(bool isNewRegistration)? newRegistration,
     required TResult orElse(),
   }) {
     if (onLoadState != null) {
-      return onLoadState(registrationList);
+      return onLoadState(registrationList, studentList);
     }
     return orElse();
   }
@@ -436,6 +740,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_NewRegistration value) newRegistration,
   }) {
     return onLoadState(this);
   }
@@ -445,6 +750,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_NewRegistration value)? newRegistration,
   }) {
     return onLoadState?.call(this);
   }
@@ -454,6 +760,7 @@ class _$OnLoadStateImpl implements _OnLoadState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_NewRegistration value)? newRegistration,
     required TResult orElse(),
   }) {
     if (onLoadState != null) {
@@ -465,11 +772,160 @@ class _$OnLoadStateImpl implements _OnLoadState {
 
 abstract class _OnLoadState implements RegistrationState {
   const factory _OnLoadState(
-          {required final List<RegistrationModel> registrationList}) =
-      _$OnLoadStateImpl;
+      {required final List<RegistrationModel> registrationList,
+      required final List<StudentModel> studentList}) = _$OnLoadStateImpl;
 
   List<RegistrationModel> get registrationList;
+  List<StudentModel> get studentList;
   @JsonKey(ignore: true)
   _$$OnLoadStateImplCopyWith<_$OnLoadStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NewRegistrationImplCopyWith<$Res> {
+  factory _$$NewRegistrationImplCopyWith(_$NewRegistrationImpl value,
+          $Res Function(_$NewRegistrationImpl) then) =
+      __$$NewRegistrationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isNewRegistration});
+}
+
+/// @nodoc
+class __$$NewRegistrationImplCopyWithImpl<$Res>
+    extends _$RegistrationStateCopyWithImpl<$Res, _$NewRegistrationImpl>
+    implements _$$NewRegistrationImplCopyWith<$Res> {
+  __$$NewRegistrationImplCopyWithImpl(
+      _$NewRegistrationImpl _value, $Res Function(_$NewRegistrationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isNewRegistration = null,
+  }) {
+    return _then(_$NewRegistrationImpl(
+      isNewRegistration: null == isNewRegistration
+          ? _value.isNewRegistration
+          : isNewRegistration // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NewRegistrationImpl implements _NewRegistration {
+  const _$NewRegistrationImpl({required this.isNewRegistration});
+
+  @override
+  final bool isNewRegistration;
+
+  @override
+  String toString() {
+    return 'RegistrationState.newRegistration(isNewRegistration: $isNewRegistration)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NewRegistrationImpl &&
+            (identical(other.isNewRegistration, isNewRegistration) ||
+                other.isNewRegistration == isNewRegistration));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isNewRegistration);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NewRegistrationImplCopyWith<_$NewRegistrationImpl> get copyWith =>
+      __$$NewRegistrationImplCopyWithImpl<_$NewRegistrationImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)
+        onLoadState,
+    required TResult Function(bool isNewRegistration) newRegistration,
+  }) {
+    return newRegistration(isNewRegistration);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult? Function(bool isNewRegistration)? newRegistration,
+  }) {
+    return newRegistration?.call(isNewRegistration);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<RegistrationModel> registrationList,
+            List<StudentModel> studentList)?
+        onLoadState,
+    TResult Function(bool isNewRegistration)? newRegistration,
+    required TResult orElse(),
+  }) {
+    if (newRegistration != null) {
+      return newRegistration(isNewRegistration);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_OnLoadState value) onLoadState,
+    required TResult Function(_NewRegistration value) newRegistration,
+  }) {
+    return newRegistration(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_OnLoadState value)? onLoadState,
+    TResult? Function(_NewRegistration value)? newRegistration,
+  }) {
+    return newRegistration?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_OnLoadState value)? onLoadState,
+    TResult Function(_NewRegistration value)? newRegistration,
+    required TResult orElse(),
+  }) {
+    if (newRegistration != null) {
+      return newRegistration(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NewRegistration implements RegistrationState {
+  const factory _NewRegistration({required final bool isNewRegistration}) =
+      _$NewRegistrationImpl;
+
+  bool get isNewRegistration;
+  @JsonKey(ignore: true)
+  _$$NewRegistrationImplCopyWith<_$NewRegistrationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

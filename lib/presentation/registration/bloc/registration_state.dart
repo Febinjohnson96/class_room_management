@@ -4,5 +4,7 @@ part of 'registration_bloc.dart';
 class RegistrationState with _$RegistrationState {
   const factory RegistrationState.initial() = _Initial;
   const factory RegistrationState.onLoadState(
-      {required List<RegistrationModel> registrationList}) = _OnLoadState;
+      {required List<RegistrationModel> registrationList , required List<StudentModel> studentList}) = _OnLoadState;
+  const factory RegistrationState.newRegistration(
+      {required bool isNewRegistration}) = _NewRegistration;
 }
