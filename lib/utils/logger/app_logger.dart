@@ -2,7 +2,13 @@ import 'package:logger/logger.dart';
 
 class AppLogger {
   AppLogger._();
-  static final logger = Logger();
+    static final logger = Logger(
+      printer: PrettyPrinter(
+    methodCount: 0,
+    errorMethodCount: 0,
+    colors: true,
+    dateTimeFormat: DateTimeFormat.none,
+  ));
 
   static debuglog(String message) {
     logger.d(message);
