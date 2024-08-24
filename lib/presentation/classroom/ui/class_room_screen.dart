@@ -31,6 +31,9 @@ class ClassRoomScreen extends StatelessWidget {
             "ClassRooms",
             style: AppTypography.sfPro22w4700,
           ),
+          SizedBox(
+            height: 20.h,
+          ),
           BlocBuilder<ClassRoomBloc, ClassRoomState>(builder: (context, state) {
             return Expanded(
               child: state.when(
@@ -38,8 +41,8 @@ class ClassRoomScreen extends StatelessWidget {
                 onLoadState: (classRoomList) => ListView.separated(
                   itemBuilder: (context, index) => GestureDetector(
                     onTap: () {
-                      // context.push(RouteName.studentDetails,
-                      //     extra: studentList[index]);
+                      context.push(RouteName.classRoomDetails,
+                          extra: classRoomList[index]);
                     },
                     child: Container(
                       decoration: BoxDecoration(

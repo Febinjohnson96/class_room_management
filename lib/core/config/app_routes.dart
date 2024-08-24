@@ -1,7 +1,9 @@
 import 'package:class_room_management/core/config/route_name.dart';
+import 'package:class_room_management/domain/model/classroom/class_room_model.dart';
 import 'package:class_room_management/domain/model/student/student_model.dart';
 import 'package:class_room_management/domain/model/subject_model/subject_model.dart';
 import 'package:class_room_management/presentation/classroom/class_room_ui.dart';
+import 'package:class_room_management/presentation/classroom_detail/classroom_detail_ui.dart';
 import 'package:class_room_management/presentation/home/home_ui.dart';
 import 'package:class_room_management/presentation/registration/registration_ui.dart';
 import 'package:class_room_management/presentation/student/student_ui.dart';
@@ -39,6 +41,13 @@ final GoRouter appRoute = GoRouter(
       builder: (context, state) {
         final subject = state.extra as SubjectModel;
         return SubjectDetailScreen(subject: subject);
+      },
+    ),
+    GoRoute(
+      path: RouteName.classRoomDetails,
+      builder: (context, state) {
+        final classroom = state.extra as ClassRoomModel;
+        return ClassroomDetailUi(classRoom: classroom);
       },
     ),
   ],
