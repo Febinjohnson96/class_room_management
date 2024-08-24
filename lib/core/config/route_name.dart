@@ -7,4 +7,5 @@ class RouteName {
   static const String subjectscreen = '/Subjects';
   static const String studentDetails = '/StudentDetails';
   static const String subjectDetails = "/SubjectDetails";
+  static const String classRoomDetails="/ClassRoomDetails";
 }
