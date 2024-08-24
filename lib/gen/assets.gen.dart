@@ -24,6 +24,9 @@ class $AssetsImagesGen {
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// Directory path: assets/svg/class_detail
+  $AssetsSvgClassDetailGen get classDetail => const $AssetsSvgClassDetailGen();
+
   /// Directory path: assets/svg/home_screen
   $AssetsSvgHomeScreenGen get homeScreen => const $AssetsSvgHomeScreenGen();
 }
@@ -35,8 +38,12 @@ class $AssetsImagesStudentDetailGen {
   AssetGenImage get student =>
       const AssetGenImage('assets/images/student_detail/student.png');
 
+  /// File path: assets/images/student_detail/student_chair.png
+  AssetGenImage get studentChair =>
+      const AssetGenImage('assets/images/student_detail/student_chair.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [student];
+  List<AssetGenImage> get values => [student, studentChair];
 }
 
 class $AssetsImagesSubjectDetailGen {
@@ -48,6 +55,16 @@ class $AssetsImagesSubjectDetailGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [subject];
+}
+
+class $AssetsSvgClassDetailGen {
+  const $AssetsSvgClassDetailGen();
+
+  /// File path: assets/svg/class_detail/student_class.svg
+  String get studentClass => 'assets/svg/class_detail/student_class.svg';
+
+  /// List of all assets
+  List<String> get values => [studentClass];
 }
 
 class $AssetsSvgHomeScreenGen {

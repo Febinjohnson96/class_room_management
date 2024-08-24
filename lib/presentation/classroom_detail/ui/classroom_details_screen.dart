@@ -1,6 +1,7 @@
 import 'package:class_room_management/core/config/app_typography.dart';
 import 'package:class_room_management/domain/model/classroom/class_room_model.dart';
 import 'package:class_room_management/domain/model/subject_model/subject_model.dart';
+import 'package:class_room_management/gen/assets.gen.dart';
 import 'package:class_room_management/presentation/classroom_detail/bloc/class_room_detail_bloc.dart';
 import 'package:class_room_management/widgets/app_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -89,6 +90,23 @@ class _ClassroomDetailsScreenState extends State<ClassroomDetailsScreen> {
               ),
             ),
           ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Expanded(
+              child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4, crossAxisSpacing: 8, mainAxisSpacing: 8),
+            itemBuilder: (context, index) => Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 1),
+              ),
+              child: Center(child:Image.asset(Assets.images.studentDetail.studentChair.path,
+              height: 30.h,
+              ))
+            ),
+            itemCount: widget.classRoom.size,
+          )),
         ],
       ),
     );
@@ -134,7 +152,8 @@ class _DropdownSelectorState<T> extends State<DropdownSelector<T>> {
                 subtitle:
                     Text(subject.teacherName ?? ''), // Subtitle as teacherName
                 contentPadding: EdgeInsets.zero, // Adjust padding if needed
-                visualDensity: VisualDensity.compact, // Adjust density if needed
+                visualDensity:
+                    VisualDensity.compact, // Adjust density if needed
               ),
             ),
           );
